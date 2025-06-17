@@ -41,7 +41,7 @@ Model dilatih menggunakan:
 ## 🌐 Deployment
 
 Aplikasi ini dideploy menggunakan [Streamlit Cloud](https://streamlit.io/cloud).  
-🔗 Link aplikasi: [https://username-obesity-app.streamlit.app](https://username-obesity-app.streamlit.app)
+🔗 Link aplikasi: [(https://username-obesity-app.streamlit.app)](https://bengkel-coding.streamlit.app/)
 
 ## 🗂️ Struktur Folder
 
