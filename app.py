@@ -9,6 +9,7 @@ model = joblib.load("model.pkl")
 page = st.sidebar.radio("Navigasi", ["🏠 Prediksi", "ℹ️ Tentang Aplikasi"])
 
 if page == "🏠 Prediksi":
+    st.markdown("link progress :")
     st.title("🎯 Prediksi Tingkat Obesitas")
     st.markdown("Masukkan informasi pribadi dan kebiasaan harian Anda untuk mengetahui estimasi tingkat obesitas.")
 
