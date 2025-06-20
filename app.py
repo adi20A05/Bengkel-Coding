@@ -46,7 +46,7 @@ if page == "🏠 Prediksi":
     }
 
     # Array input
-    features = np.array([[
+    features = np.array([[ 
         age,
         encode(gender, gender_map),
         height,
@@ -65,12 +65,24 @@ if page == "🏠 Prediksi":
         encode(mtrans, mtrans_map)
     ]])
 
+    # Mapping hasil prediksi
+    label_map = {
+        0: "Insufficient Weight",
+        1: "Normal Weight",
+        2: "Overweight Level I",
+        3: "Overweight Level II",
+        4: "Obesity Type I",
+        5: "Obesity Type II",
+        6: "Obesity Type III"
+    }
+
     # --- PREDIKSI ---
     if st.button("🔍 Prediksi Sekarang"):
         pred = model.predict(features)
         label = pred[0]
+        label_name = label_map.get(label, "Label tidak dikenali")
 
-        st.success(f"✅ Hasil Prediksi: **{label.replace('_', ' ')}**")
+        st.success(f"✅ Hasil Prediksi: **{label_name}**")
 
         # Penjelasan singkat
         st.markdown("### 📘 Keterangan:")
